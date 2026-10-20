@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fahim [SURNAME] — Brand Identity Designer</title>
+<meta name="description" content="Portfolio of Fahim [SURNAME], a logo and brand identity designer from Bangladesh. Concept identity projects and experiments.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#090909;--ch:#151515;--fg:#F3F0E8;--lime:#C8FF00;--mu:#9a9a9a;--line:rgba(243,240,232,.14);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:dark}
+html{scroll-padding-top:70px;scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 17px/1.55 'Archivo',system-ui,sans-serif;overflow-x:hidden}
+a{color:inherit}
+.m{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12px;letter-spacing:.04em;color:var(--mu)}
+:focus-visible{outline:2px solid var(--lime);outline-offset:3px}
+.wrap{padding:0 clamp(18px,4vw,56px)}
+section{position:relative;padding:clamp(80px,12vw,160px) 0;border-top:1px solid var(--line)}
+h1,h2,h3{margin:0;font-weight:900;font-stretch:75%;line-height:.86;letter-spacing:-.02em}
+h2{font-size:clamp(52px,12vw,190px)}
+.grid{position:fixed;inset:0;z-index:-1;pointer-events:none;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:120px 120px;opacity:.35;animation:drift 40s linear infinite}
+@keyframes drift{to{background-position:120px 120px}}
+/* nav */
+header{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:calc(14px + env(safe-area-inset-top,0px)) clamp(18px,4vw,56px) 14px;mix-blend-mode:difference}
+.logo{font-weight:900;font-stretch:62%;font-size:22px;text-decoration:none;letter-spacing:.01em}
+nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0}
+nav a{text-decoration:none;position:relative;padding:4px 0;font-size:15px}
+nav a::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:100%;background:var(--lime);transform:scaleX(0);transform-origin:left;transition:transform .35s cubic-bezier(.7,0,.2,1)}
+nav a:hover::after,nav a.on::after{transform:scaleX(1)}
+#burger{display:none;background:none;border:1px solid var(--fg);color:var(--fg);padding:8px 14px;font:inherit;border-radius:99px;cursor:pointer}
+@media(max-width:760px){#burger{display:block}nav ul{position:fixed;inset:0;background:var(--lime);color:#090909;flex-direction:column;justify-content:center;padding:0 24px;gap:6px;clip-path:circle(0 at 100% 0);transition:clip-path .6s cubic-bezier(.7,0,.2,1);visibility:hidden;mix-blend-mode:normal}
+nav ul.open{clip-path:circle(150% at 100% 0);visibility:visible}nav ul a{font-size:15vw;font-weight:900;font-stretch:62%;line-height:1}}
+.prog{position:fixed;left:0;top:0;height:3px;width:100%;background:var(--lime);transform:scaleX(0);transform-origin:left;z-index:60}
+/* intro */
+#intro{position:fixed;inset:0;z-index:100;background:var(--lime);color:#090909;display:grid;place-items:center}
+#intro .w{font-size:clamp(70px,22vw,340px);font-weight:900;font-stretch:62%;line-height:.8;overflow:hidden;text-align:center}
+#intro .w span{display:inline-block}
+#intro button{position:absolute;right:20px;bottom:calc(20px + env(safe-area-inset-bottom,0px));background:#090909;color:var(--lime);border:0;padding:10px 18px;border-radius:99px;font:600 13px 'JetBrains Mono',monospace;cursor:pointer}
+/* hero */
+.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding-top:110px;border:0;overflow:hidden}
+.hero h1{font-size:clamp(64px,19vw,320px);font-stretch:62%}
+.hero h1 .l{display:block;overflow:hidden;padding-bottom:.04em}.hero h1 .l span{display:inline-block}
+.hero h1 .o{color:transparent;-webkit-text-stroke:2px var(--fg)}
+.hero .row{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:flex-end;margin-top:34px}
+.hero p{max-width:46ch;margin:0;font-size:19px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:15px 26px;border-radius:99px;border:1px solid var(--fg);text-decoration:none;font-weight:600;transition:background .3s,color .3s,transform .2s;will-change:transform}
+.btn.p{background:var(--lime);border-color:var(--lime);color:#090909}.btn:hover{background:var(--fg);color:#090909}
+.orb{position:absolute;right:6vw;top:16vh;width:min(34vw,380px);aspect-ratio:1;pointer-events:none}
+.orb svg{width:100%;height:100%;animation:spin 40s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
+.vert{position:absolute;left:10px;top:50%;writing-mode:vertical-rl;transform:rotate(180deg)}
+/* work */
+.wh{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:60px}
+.proj{display:grid;grid-template-columns:1fr;border-top:1px solid var(--line);position:relative}
+.proj button{all:unset;cursor:pointer;display:grid;grid-template-columns:auto 1fr auto;gap:clamp(12px,3vw,40px);align-items:center;width:100%;padding:28px 0;box-sizing:border-box}
+.proj .n{font-size:clamp(40px,8vw,120px);font-weight:900;font-stretch:62%;color:transparent;-webkit-text-stroke:1px var(--mu);line-height:1}
+.proj .t{font-size:clamp(38px,9vw,150px);font-weight:900;font-stretch:62%;line-height:.9;transition:letter-spacing .5s,color .3s,transform .5s}
+.proj button:hover .t,.proj button:focus-visible .t{letter-spacing:.04em;transform:translateX(14px);color:var(--c)}
+.proj .info{text-align:right;max-width:200px}
+.proj:last-of-type{border-bottom:1px solid var(--line)}
+#peek{position:fixed;left:0;top:0;width:260px;height:320px;pointer-events:none;z-index:30;opacity:0;scale:.6;border-radius:6px;overflow:hidden;display:grid;place-items:center}
+#peek svg{width:60%}
+@media(hover:none),(max-width:760px){#peek{display:none}.proj .info{display:none}.proj button{grid-template-columns:auto 1fr}}
+.tag{display:inline-block;border:1px solid var(--lime);color:var(--lime);padding:2px 10px;border-radius:99px;font:600 11px 'JetBrains Mono',monospace}
+/* case study */
+dialog{border:0;padding:0;width:100%;max-width:100%;height:100%;max-height:100%;background:var(--bg);color:var(--fg);overflow-y:auto}
+dialog::backdrop{background:#000}
+.cs-hero{min-height:100svh;display:grid;align-content:end;padding:100px clamp(18px,4vw,56px) 40px;position:relative;overflow:hidden}
+.cs-hero h2{font-size:clamp(60px,17vw,300px);position:relative;z-index:1}
+.cs-logo{position:absolute;right:5vw;top:12vh;width:min(46vw,520px);z-index:0}
+.close{position:fixed;right:18px;top:calc(16px + env(safe-area-inset-top,0px));z-index:5;background:var(--lime);color:#090909;border:0;border-radius:99px;padding:11px 20px;font:600 14px 'Archivo';cursor:pointer}
+.cs-body{padding:70px clamp(18px,4vw,56px);display:grid;grid-template-columns:repeat(12,1fr);gap:40px 24px}
+.cs-body>*{grid-column:span 12}
+.cs-body .a{grid-column:span 5}.cs-body .b{grid-column:span 7}
+@media(max-width:760px){.cs-body .a,.cs-body .b{grid-column:span 12}}
+.cs-body h3{font-size:clamp(28px,4vw,48px);margin-bottom:14px;line-height:1}
+.sw{display:flex;height:180px}.sw div{flex:1;display:flex;align-items:flex-end;padding:12px;font:600 12px 'JetBrains Mono',monospace;transition:flex .5s}
+.sw div:hover{flex:2.5}
+.apps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.app{aspect-ratio:4/5;padding:20px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;border-radius:4px}
+.app b{font-size:34px;font-weight:900;font-stretch:62%;line-height:.9}
+.app svg{width:55%;align-self:center}
+.type{font-size:clamp(60px,14vw,220px);line-height:.85;overflow-wrap:anywhere}
+/* about etc */
+.about{display:grid;grid-template-columns:1fr 1.4fr;gap:clamp(30px,6vw,100px);margin-top:60px}
+.ph{aspect-ratio:4/5;background:var(--ch);border:1px dashed var(--mu);display:grid;place-items:center;text-align:center;padding:20px;position:relative;overflow:hidden}
+.ph::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent 0 14px,var(--line) 14px 15px)}
+.ph span{position:relative}
+.about p{font-size:clamp(19px,2.2vw,28px);line-height:1.35;margin:0 0 22px}
+.skills{margin-top:60px}
+.sk{display:flex;flex-wrap:wrap;gap:10px 22px;padding:24px 0;border-top:1px solid var(--line);align-items:baseline}
+.sk h3{width:100%;font-size:14px;font-family:'JetBrains Mono',monospace;font-weight:400;color:var(--mu);letter-spacing:.04em;margin-bottom:6px;font-stretch:100%}
+.sk span{font-size:clamp(30px,6vw,84px);font-weight:900;font-stretch:62%;line-height:1;cursor:default;transition:color .25s,letter-spacing .4s}
+.sk.core span{color:var(--lime)}.sk.dev span{color:transparent;-webkit-text-stroke:1px var(--fg)}
+.sk span:hover{letter-spacing:.05em;color:var(--lime);-webkit-text-stroke:0}
+.proc{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:0;margin-top:60px;border-left:1px solid var(--line)}
+.step{padding:28px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);position:relative;min-height:240px;transition:background .3s}
+.step:hover{background:var(--ch)}
+.step svg{width:64px;height:64px;margin-bottom:20px;stroke:var(--lime);fill:none;stroke-width:2}
+.step h3{font-size:44px;margin-bottom:8px}
+.step p{margin:0;color:var(--mu)}
+.exp{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:60px}
+.ex{aspect-ratio:1;background:var(--ch);position:relative;overflow:hidden;display:grid;place-items:center;border:1px solid var(--line)}
+.ex .m{position:absolute;left:12px;bottom:10px}
+.ex.w1 .big{font-size:150px;font-weight:900;font-stretch:62%;animation:wdth 4s ease-in-out infinite alternate}
+@keyframes wdth{from{font-stretch:62%;color:var(--fg)}to{font-stretch:125%;color:var(--lime)}}
+.cube{width:110px;height:110px;position:relative;transform-style:preserve-3d;animation:cr 9s linear infinite}
+.ex.w2{perspective:500px}.cube i{position:absolute;inset:0;border:2px solid var(--lime);background:rgba(200,255,0,.05)}
+.cube i:nth-child(1){transform:translateZ(55px)}.cube i:nth-child(2){transform:rotateY(180deg) translateZ(55px)}.cube i:nth-child(3){transform:rotateY(90deg) translateZ(55px)}.cube i:nth-child(4){transform:rotateY(-90deg) translateZ(55px)}.cube i:nth-child(5){transform:rotateX(90deg) translateZ(55px)}.cube i:nth-child(6){transform:rotateX(-90deg) translateZ(55px)}
+@keyframes cr{to{transform:rotateX(360deg) rotateY(360deg)}}
+.ex svg{width:70%}
+.morph{animation:mp 3s ease-in-out infinite alternate}@keyframes mp{to{d:path("M20 100 L100 20 L180 100 L100 180 Z")}}
+/* contact */
+.mail{display:block;font-size:clamp(34px,8.4vw,150px);font-weight:900;font-stretch:62%;line-height:.95;text-decoration:none;overflow-wrap:anywhere;margin:50px 0 30px;transition:color .3s}
+.mail:hover{color:var(--lime)}
+footer{padding:50px 0 calc(40px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);overflow:hidden}
+footer .row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.marq{white-space:nowrap;font-size:clamp(60px,14vw,220px);font-weight:900;font-stretch:62%;color:transparent;-webkit-text-stroke:1px var(--mu);line-height:1;margin-top:40px}
+.marq span{display:inline-block;animation:mq 30s linear infinite}@keyframes mq{to{transform:translateX(-50%)}}
+#toast{position:fixed;left:50%;bottom:30px;transform:translate(-50%,120px);background:var(--lime);color:#090909;padding:12px 22px;border-radius:99px;font-weight:600;transition:transform .4s;z-index:200}
+#toast.on{transform:translate(-50%,0)}
+
+/* GTA */
+#gta{--pk:#FF2E88;--or:#FF9A3C;overflow:hidden}
+.gta-scene{position:relative;height:clamp(220px,34vw,340px);margin:50px 0 0;border:1px solid var(--line);overflow:hidden;background:linear-gradient(180deg,#1b0836 0%,#7a1560 48%,var(--pk) 72%,var(--or) 100%)}
+.gta-sun{position:absolute;left:50%;bottom:22%;width:clamp(120px,22vw,220px);aspect-ratio:1;margin-left:calc(clamp(120px,22vw,220px)/-2);border-radius:50%;background:linear-gradient(180deg,#FFE36B,#FF6A3D);animation:sunp 5s ease-in-out infinite alternate}
+.gta-sun::after{content:"";position:absolute;inset:55% 0 0;background:repeating-linear-gradient(180deg,transparent 0 6px,#7a1560 6px 10px);mix-blend-mode:multiply;opacity:.55}
+@keyframes sunp{to{transform:translateY(-14px) scale(1.05)}}
+.gta-sky{position:absolute;left:0;bottom:16%;width:200%;height:46%;display:flex;animation:sky 38s linear infinite}
+.gta-sky.f{height:34%;bottom:14%;animation-duration:18s}
+.gta-sky svg{width:50%;height:100%;flex:none}
+@keyframes sky{to{transform:translateX(-50%)}}
+.gta-road{position:absolute;left:0;right:0;bottom:0;height:16%;background:#0b0b0b;border-top:2px solid var(--lime)}
+.gta-road::before{content:"";position:absolute;left:0;right:0;top:50%;height:4px;background:repeating-linear-gradient(90deg,var(--fg) 0 36px,transparent 36px 80px);animation:dash 1s linear infinite}
+@keyframes dash{to{background-position:-80px 0}}
+.gta-car{position:absolute;bottom:8%;left:-200px;width:clamp(110px,16vw,170px);animation:drive 9s cubic-bezier(.5,0,.5,1) infinite;filter:drop-shadow(0 0 12px rgba(255,46,136,.7))}
+.gta-car .bd{animation:bob .35s ease-in-out infinite alternate}
+@keyframes bob{to{transform:translateY(-2px)}}
+.gta-car .wl{transform-box:fill-box;transform-origin:center;animation:spin .4s linear infinite}
+@keyframes drive{0%{left:-200px}100%{left:105%}}
+.gta-wanted{position:absolute;right:14px;top:12px;display:flex;gap:6px;align-items:center}
+.gta-wanted b{font:600 11px 'JetBrains Mono',monospace;color:#fff;letter-spacing:.1em;margin-right:4px}
+.gta-wanted i{width:18px;height:18px;background:#fff;clip-path:polygon(50% 0,62% 36%,100% 38%,70% 60%,80% 100%,50% 76%,20% 100%,30% 60%,0 38%,38% 36%);opacity:.2;animation:star 3.5s steps(1) infinite}
+.gta-wanted i:nth-child(2){animation-delay:0s}.gta-wanted i:nth-child(3){animation-delay:.35s}.gta-wanted i:nth-child(4){animation-delay:.7s}.gta-wanted i:nth-child(5){animation-delay:1.05s}.gta-wanted i:nth-child(6){animation-delay:1.4s}
+@keyframes star{0%{opacity:.2}10%{opacity:1;background:var(--lime)}60%{opacity:1;background:var(--lime)}70%{opacity:.2;background:#fff}100%{opacity:.2}}
+.gta-title{font-size:clamp(70px,20vw,340px);font-stretch:62%;margin:40px 0 0;position:relative;display:inline-block;background:linear-gradient(90deg,var(--pk),var(--or),var(--lime),var(--pk));background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:hue 6s linear infinite}
+@keyframes hue{to{background-position:300% 0}}
+.gta-title::before,.gta-title::after{content:attr(data-t);position:absolute;left:0;top:0;background:inherit;-webkit-background-clip:text;background-clip:text;color:transparent;clip-path:inset(0 0 100% 0);animation:glitch 4s steps(1) infinite}
+.gta-title::before{transform:translateX(-5px);filter:hue-rotate(90deg)}.gta-title::after{transform:translateX(5px);animation-delay:.07s}
+@keyframes glitch{0%,90%,100%{clip-path:inset(0 0 100% 0)}92%{clip-path:inset(20% 0 55% 0)}95%{clip-path:inset(60% 0 15% 0)}97%{clip-path:inset(35% 0 40% 0)}}
+.gta-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0;margin-top:60px;border-left:1px solid var(--line)}
+.gta-stats div{padding:26px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);border-top:1px solid var(--line)}
+.gta-stats strong{display:block;font-size:clamp(48px,7vw,100px);font-weight:900;font-stretch:62%;line-height:.9;color:var(--lime)}
+.gta-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:16px;margin-top:16px}
+.gcard{all:unset;cursor:pointer;display:block;aspect-ratio:4/3;min-height:200px;perspective:900px;box-sizing:border-box}
+.gcard:focus-visible{outline:2px solid var(--lime);outline-offset:3px}
+.gcard .in{display:block;position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform .7s cubic-bezier(.7,0,.2,1)}
+.gcard.flip .in,.gcard:hover .in{transform:rotateY(180deg)}
+.gcard .fr,.gcard .bk{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;padding:20px;display:flex;flex-direction:column;justify-content:space-between;gap:10px;overflow:hidden;border:1px solid var(--line);box-sizing:border-box}
+.gcard .fr{background:var(--ch)}.gcard .fr b{display:block;overflow-wrap:break-word;font-size:clamp(28px,3vw,44px);font-weight:900;font-stretch:62%;line-height:.95}
+.gcard .bk{transform:rotateY(180deg);background:var(--c);color:#090909;font-size:15px;line-height:1.4}
+.gcard .bk .m{color:#090909}
+.gta-cd{display:flex;gap:clamp(10px,2vw,24px);flex-wrap:wrap;margin-top:60px;align-items:flex-end}
+.gta-cd .m{display:block;margin-top:6px}
+.gta-cd div{min-width:84px;text-align:center;border:1px solid var(--pk);padding:14px 10px;background:rgba(255,46,136,.07)}
+.gta-cd span:not(.m){display:block;font-size:clamp(40px,7vw,96px);font-weight:900;font-stretch:62%;line-height:1;color:var(--pk);font-variant-numeric:tabular-nums}
+.gta-tl{display:flex;gap:0;margin-top:60px;overflow-x:auto;padding:30px 0 14px;position:relative;scrollbar-width:thin}
+.gta-tl::before{content:"";position:absolute;left:0;top:38px;height:2px;width:100%;min-width:900px;background:var(--lime);transform-origin:left;transform:scaleX(var(--p,0));transition:transform 2s cubic-bezier(.7,0,.2,1)}
+.gta-tl li{list-style:none;flex:0 0 150px;padding-top:26px;position:relative}
+.gta-tl li::before{content:"";position:absolute;top:-1px;left:0;width:16px;height:16px;border-radius:50%;background:var(--bg);border:2px solid var(--lime);transition:background .3s,transform .3s}
+.gta-tl li:hover::before{background:var(--pk);transform:scale(1.4)}
+.gta-tl b{display:block;font-size:34px;font-weight:900;font-stretch:62%;line-height:1}
+.gta-tl{margin-left:0;padding-left:0}.gta-tl ul,ul.gta-tl{padding-left:0}
+.gta-rv{opacity:0;transform:translateY(40px);transition:opacity .8s,transform .8s cubic-bezier(.2,.7,.2,1)}.gta-rv.in{opacity:1;transform:none}
+@media(max-width:760px){.about{grid-template-columns:1fr}.orb{opacity:.5;right:-10vw;top:12vh;width:60vw}.vert{display:none}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition-duration:.01ms!important;scroll-behavior:auto!important}#intro{display:none}}
+</style></head>
+<body>
+<div class="grid" aria-hidden="true"></div><div class="prog" aria-hidden="true"></div>
+<div id="intro" role="dialog" aria-label="Intro"><div class="w" aria-hidden="true"></div><button id="skip">Skip intro</button></div>
+<header><a class="logo" href="#top" aria-label="Fahim, home">FAHIM<span style="color:var(--lime)">.</span></a>
+<nav aria-label="Main"><button id="burger" aria-expanded="false" aria-controls="menu">Menu</button>
+<ul id="menu"><li><a href="#work">Selected Work</a></li><li><a href="#about">About</a></li><li><a href="#process">Process</a></li><li><a href="#experiments">Experiments</a></li><li><a href="#gta">GTA</a></li><li><a href="#contact">Contact</a></li></ul></nav></header>
+<main id="top">
+<section class="hero wrap" aria-label="Introduction">
+<span class="m vert">Bangladesh / Logo &amp; brand identity</span>
+<div class="orb" aria-hidden="true"><svg viewBox="0 0 200 200"><defs><path id="c" d="M100 100 m-82 0 a82 82 0 1 1 164 0 a82 82 0 1 1 -164 0"/></defs><circle cx="100" cy="100" r="48" fill="none" stroke="#C8FF00" stroke-width="1.5"/><rect x="76" y="76" width="48" height="48" fill="#C8FF00"/><text font-family="JetBrains Mono" font-size="10" fill="#F3F0E8" letter-spacing="3"><textPath href="#c">LOGOS · IDENTITY · TYPE · SYSTEMS · CONCEPTS · </textPath></text></svg></div>
+<h1 aria-label="Identities that make ideas impossible to ignore, by Fahim [SURNAME]"><span class="l"><span>Ideas</span></span><span class="l"><span class="o">impossible</span></span><span class="l"><span>to ignore.</span></span></h1>
+<div class="row"><div><p class="m" style="margin-bottom:10px">Fahim [SURNAME] — Brand Identity Designer, Bangladesh</p><p>I design logos and visual identities, and I’m learning to ground every choice in strategy. The work below is self-initiated concept work, labelled as such.</p></div>
+<div class="btns"><a class="btn p" href="#work" data-mag>See selected work</a><a class="btn" href="#contact" data-mag>Start a conversation</a></div></div>
+</section>
+
+<section id="work" class="wrap" aria-labelledby="wt">
+<div class="wh"><h2 id="wt">Selected<br>work</h2><p class="m" style="max-width:34ch">Five fictional brands, built to show how I think. None are real clients. Choose one to open its case study.</p></div>
+<div id="list"></div></section>
+
+<section id="about" class="wrap" aria-labelledby="at"><h2 id="at">About</h2>
+<div class="about"><div class="ph" role="img" aria-label="Placeholder for portrait of Fahim"><span class="m">Portrait placeholder<br>replace with your photo</span></div>
+<div><p>I’m Fahim, a brand identity designer from Bangladesh. I want to make identities that are clear about who a brand is and why it exists.</p>
+<p>I’m studying Philosophy, which shapes how I ask questions about meaning and communication. My career direction is design, branding, and creative business.</p>
+<p>I use AI as a tool, not a crutch. The aim is independent judgment and strong fundamentals.</p>
+<a class="btn" href="https://github.com/fahim809/" target="_blank" rel="noopener">GitHub: fahim809</a></div></div>
+<div class="skills" role="list"><div class="sk core" role="listitem"><h3>Core focus</h3><span>Logo design</span><span>Brand identity</span><span>Visual identity</span></div>
+<div class="sk" role="listitem"><h3>Creative interests</h3><span>Typography</span><span>Concept development</span><span>Graphic design</span><span>Experimentation</span></div>
+<div class="sk dev" role="listitem"><h3>Developing</h3><span>Brand strategy</span><span>Art direction</span><span>Logo motion</span><span>3D</span><span>Client communication</span></div></div></section>
+
+<section id="process" class="wrap" aria-labelledby="pt"><div class="wh"><h2 id="pt">Process</h2><p class="m" style="max-width:34ch">The approach I follow on concept work and aim to follow with clients.</p></div>
+<div class="proc" id="proc"></div></section>
+
+<section id="experiments" class="wrap" aria-labelledby="et"><div class="wh"><h2 id="et">Experi-<br>ments</h2><p class="m" style="max-width:34ch">Exploratory studies. A place for typography, 3D, motion and research as the library grows.</p></div>
+<div class="exp">
+<div class="ex w1"><div class="big" aria-hidden="true">Aa</div><span class="m">Type study: width axis</span></div>
+<div class="ex w2"><div class="cube" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div><span class="m">3D study: wireframe form</span></div>
+<div class="ex"><svg viewBox="0 0 200 200" aria-hidden="true"><path class="morph" d="M100 20 C150 20 180 50 180 100 C180 150 150 180 100 180 C50 180 20 150 20 100 C20 50 50 20 100 20Z" fill="none" stroke="#C8FF00" stroke-width="3"/></svg><span class="m">Motion: circle to diamond</span></div>
+<div class="ex"><svg viewBox="0 0 200 200" aria-hidden="true"><g fill="none" stroke="#F3F0E8" stroke-width="2"><circle cx="70" cy="100" r="50"/><circle cx="130" cy="100" r="50"/><path d="M100 57v86" stroke="#C8FF00"/></g></svg><span class="m">Logo exploration: overlap</span></div></div></section>
+
+
+<section id="gta" class="wrap" aria-labelledby="gt">
+<div class="wh"><h2 id="gt" style="position:absolute;width:1px;height:1px;overflow:hidden">GTA</h2><div class="gta-title" data-t="GTA" aria-hidden="true">GTA</div><p class="m" style="max-width:34ch">Grand Theft Auto, the open-world series by Rockstar Games. Fun facts, a timeline and a very patient countdown.</p></div>
+<div class="gta-scene" aria-hidden="true"><div class="gta-sun"></div><div class="gta-sky" id="sk1"></div><div class="gta-sky f" id="sk2"></div><div class="gta-road"></div>
+<div class="gta-wanted"><b>WANTED</b><i></i><i></i><i></i><i></i><i></i></div>
+<svg class="gta-car" viewBox="0 0 160 60"><g class="bd"><path d="M6 40V32l18-4 20-14h44l22 14 26 4v12z" fill="#FF2E88"/><path d="M46 17h40l16 12H34z" fill="#1b0836"/><rect x="146" y="32" width="8" height="5" fill="#FFE36B"/></g><g><circle class="wl" cx="38" cy="44" r="11" fill="#090909" stroke="#F3F0E8" stroke-width="3" stroke-dasharray="10 6"/><circle class="wl" cx="120" cy="44" r="11" fill="#090909" stroke="#F3F0E8" stroke-width="3" stroke-dasharray="10 6"/></g></svg></div>
+<div class="gta-stats gta-rv"><div><strong data-n="1997">0</strong><span class="m">Year of the first game</span></div><div><strong data-n="200" data-s="M+">0</strong><span class="m">GTA V copies sold (approx.)</span></div><div><strong data-n="3" data-s=" days">0</strong><span class="m">GTA V took 3 days to pass $1B</span></div></div>
+<div class="gta-cards gta-rv" id="gcards"></div>
+<div class="gta-rv" style="margin-top:80px"><h3 style="font-size:clamp(36px,6vw,80px)">GTA VI countdown</h3><div class="gta-cd" role="timer" aria-live="off"><div><span id="cd-d">--</span><span class="m">days</span></div><div><span id="cd-h">--</span><span class="m">hours</span></div><div><span id="cd-m">--</span><span class="m">mins</span></div><div><span id="cd-s">--</span><span class="m">secs</span></div></div><p class="m" id="cd-note" style="margin-top:14px">Counting to 19 Nov 2026, Rockstar’s announced date. Rockstar has moved it before, so check their site.</p></div>
+<ul class="gta-tl gta-rv" id="gtl" aria-label="Timeline of main GTA games"></ul>
+</section>
+
+<section id="contact" class="wrap" aria-labelledby="ct"><h2 id="ct">Let’s<br>talk.</h2>
+<p style="max-width:50ch;margin-top:30px">Have a brand that needs a clear identity? Send me a note about the project, audience and timeline.</p>
+<a class="mail" id="mail" href="mailto:pixelmaverick.ai@gmail.com">pixelmaverick.ai@gmail.com</a>
+<div class="btns"><a class="btn p" href="mailto:pixelmaverick.ai@gmail.com" data-mag>Send an email</a><button class="btn" id="copy" style="background:none;color:inherit;font:inherit;font-weight:600;cursor:pointer" data-mag>Copy email</button><a class="btn" href="https://github.com/fahim809/" target="_blank" rel="noopener">GitHub</a></div></section>
+</main>
+<footer class="wrap"><div class="row"><div><b>Fahim [SURNAME]</b><div class="m">Brand Identity Designer, Bangladesh</div></div>
+<nav aria-label="Footer"><a href="#work">Work</a> &nbsp; <a href="#about">About</a> &nbsp; <a href="#process">Process</a> &nbsp; <a href="#experiments">Experiments</a> &nbsp; <a href="#gta">GTA</a> &nbsp; <a href="#contact">Contact</a></nav>
+<div class="m"><a href="mailto:pixelmaverick.ai@gmail.com">pixelmaverick.ai@gmail.com</a><br>© <span id="yr"></span> Fahim [SURNAME]. All concept projects are fictional.</div></div>
+<div class="marq" aria-hidden="true"><span>Identity — Logos — Type — Concepts — Identity — Logos — Type — Concepts — </span></div></footer>
+<div id="peek" aria-hidden="true"></div><div id="toast" role="status" aria-live="polite">Email copied</div>
+<dialog id="cs" aria-label="Case study"></dialog>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+(function(){
+var RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var $=function(s,r){return (r||document).querySelector(s)},$$=function(s,r){return [].slice.call((r||document).querySelectorAll(s))};
+// ---- project data (edit here) ----
+var P=[
+{n:'Nova Form',k:'Furniture and product design',bg:'#E9E4D8',fg:'#1b1b1b',c:'#FF5A1F',pal:['#E9E4D8','#1b1b1b','#FF5A1F','#8A8F7A'],font:'Archivo Narrow, geometric grotesk',
+ premise:'A fictional furniture studio that makes modular pieces from simple forms. The identity is built from one cut shape that rotates and stacks like its products.',
+ aud:'Design-literate buyers in small urban homes who want furniture that adapts.',ch:'Make a modular system feel calm and precise rather than technical.',
+ logo:'<svg viewBox="0 0 200 200"><path d="M30 170V30h60a80 80 0 0 1 80 80v60z" fill="currentColor"/><path d="M30 170h60V110z" fill="var(--a)"/></svg>',
+ apps:['Product tags','Packaging sleeve','Editorial catalogue','Website'],refl:'Constraint made this work: one shape had to carry the logo, pattern and layout grid.'},
+{n:'Offgrid',k:'Outdoor and adventure',bg:'#16241C',fg:'#E8F0DC',c:'#F2B33D',pal:['#16241C','#E8F0DC','#F2B33D','#3E5C45'],font:'Heavy condensed sans with a stencil cut',
+ premise:'A fictional outdoor brand for people who travel far from signal. The mark is a compass needle that reads as a mountain ridge.',
+ aud:'Trail hikers and weekend campers who value durable gear over trends.',ch:'Feel rugged and trustworthy without relying on mountain clichés.',
+ logo:'<svg viewBox="0 0 200 200"><circle cx="100" cy="100" r="84" fill="none" stroke="currentColor" stroke-width="8"/><path d="M100 28L130 118 100 100 70 118z" fill="var(--a)"/><path d="M40 150l30-40 20 24 24-34 46 50z" fill="currentColor"/></svg>',
+ apps:['Trail stickers','Gear labels','Signage','Social set'],refl:'Palette contrast was tested for outdoor, low-light legibility.'},
+{n:'Monochrome Lab',k:'Creative technology studio',bg:'#0b0b0b',fg:'#F3F0E8',c:'#7B5CFF',pal:['#0b0b0b','#F3F0E8','#7B5CFF','#2a2a2a'],font:'Monospace plus tight grotesk',
+ premise:'A fictional studio that prototypes interfaces in black and white, adding one colour only when something is interactive.',
+ aud:'Startups looking for design-led prototyping partners.',ch:'Be technical and human at the same time.',
+ logo:'<svg viewBox="0 0 200 200"><circle cx="100" cy="100" r="80" fill="currentColor"/><path d="M100 20a80 80 0 0 1 0 160z" fill="var(--bg)"/><circle cx="100" cy="100" r="22" fill="var(--a)"/></svg>',
+ apps:['Interface kit','Social graphics','Motion identity','Slide template'],refl:'The rule “colour means action” keeps the system strict and easy to extend.'},
+{n:'Origin Objects',k:'Premium homeware',bg:'#D8C7B0',fg:'#2B1D14',c:'#8C3B22',pal:['#D8C7B0','#2B1D14','#8C3B22','#EFE6D6'],font:'High-contrast serif with a small sans',
+ premise:'A fictional homeware label that celebrates materials and the people who shape them. The mark is a monogram stamped like a maker’s hallmark.',
+ aud:'Buyers who give gifts with meaning and read labels.',ch:'Convey craft and warmth without looking nostalgic.',
+ logo:'<svg viewBox="0 0 200 200"><rect x="20" y="20" width="160" height="160" rx="80" fill="none" stroke="currentColor" stroke-width="6"/><text x="100" y="128" text-anchor="middle" font-family="Georgia,serif" font-size="96" font-style="italic" fill="currentColor">O</text><circle cx="100" cy="164" r="6" fill="var(--a)"/></svg>',
+ apps:['Box and tissue','Hallmark stamp','Care cards','Shop banner'],refl:'Texture is implied through colour and type, so the logo stays simple to reproduce.'},
+{n:'Afterhours',k:'Independent music and events',bg:'#C8FF00',fg:'#0b0b0b',c:'#FF2E88',pal:['#C8FF00','#0b0b0b','#FF2E88','#F3F0E8'],font:'Oversized variable sans, stretched by the beat',
+ premise:'A fictional event collective for nights that start when others end. The wordmark stretches and compresses like a sound wave.',
+ aud:'Young city audiences and independent artists.',ch:'Make one identity flexible enough for a new poster every week.',
+ logo:'<svg viewBox="0 0 200 200"><g fill="currentColor"><rect x="14" y="80" width="20" height="40"/><rect x="48" y="50" width="20" height="100"/><rect x="82" y="20" width="20" height="160"/><rect x="116" y="60" width="20" height="80"/><rect x="150" y="90" width="20" height="20"/></g><circle cx="180" cy="100" r="10" fill="var(--a)"/></svg>',
+ apps:['Poster series','Wristbands','Stage visuals','Ticket page'],refl:'The system is a set of rules, not one lockup, so volunteers can extend it.'}];
+var STEPS=[['Discover','Understand the brief, business, audience and context.','M10 32a22 22 0 1 0 44 0a22 22 0 1 0-44 0M46 48l12 12'],['Define','Name the central problem and the creative direction.','M32 8v48M8 32h48'],['Explore','Research references and sketch many concepts.','M8 52l16-30 12 16 8-10 12 24z'],['Design','Build the logo and supporting identity system.','M12 12h40v40H12zM12 12l40 40'],['Refine','Test, simplify and improve the work.','M10 44l14-14 10 10 20-24'],['Present','Explain the identity and where it applies.','M8 14h48v32H8zM24 56h16']];
+$('#proc').innerHTML=STEPS.map(function(s,i){return '<div class="step"><span class="m">Stage '+(i+1)+'</span><svg viewBox="0 0 64 64" aria-hidden="true"><path d="'+s[2]+'"/></svg><h3>'+s[0]+'</h3><p>'+s[1]+'</p></div>'}).join('');
+$('#list').innerHTML=P.map(function(p,i){return '<div class="proj"><button data-i="'+i+'" style="--c:'+p.c+'" aria-haspopup="dialog"><span class="n">0'+(i+1)+'</span><span class="t">'+p.n+'</span><span class="info"><span class="tag">Concept project</span><br><span class="m">'+p.k+'</span></span></button></div>'}).join('');
+$('#yr').textContent=new Date().getFullYear();
+// ---- case study ----
+var cs=$('#cs'),last;
+function open(i,push){var p=P[i];last=document.activeElement;
+ cs.style.setProperty('--bg',p.bg);cs.style.setProperty('--a',p.c);
+ var nx=(i+1)%P.length;
+ cs.innerHTML='<button class="close" aria-label="Close case study">Close</button><div style="background:'+p.bg+';color:'+p.fg+'"><div class="cs-hero"><div class="cs-logo" style="color:'+p.fg+'">'+p.logo+'</div><div style="margin-bottom:18px"><span class="tag" style="color:'+p.fg+';border-color:'+p.fg+'">Concept project — fictional brand, self-initiated</span></div><h2>'+p.n+'</h2><p style="font-size:20px;max-width:46ch;margin:20px 0 0">'+p.k+'</p></div></div>'+
+ '<div class="cs-body"><div class="a"><h3>Brief</h3><p>'+p.premise+'</p></div><div class="b"><h3>Audience and challenge</h3><p>'+p.aud+'</p><p><b>Challenge:</b> '+p.ch+'</p></div>'+
+ '<div><h3>Colour</h3><div class="sw">'+p.pal.map(function(c){return '<div style="background:'+c+';color:'+(c==p.pal[1]&&p.bg!=='#0b0b0b'?p.pal[0]:(parseInt(c.slice(1,3),16)>140?'#090909':'#fff'))+'">'+c+'</div>'}).join('')+'</div></div>'+
+ '<div><h3>Typography</h3><div class="type" style="color:'+p.c+'">'+p.n.split(' ')[0]+'</div><p class="m">'+p.font+'. Final typefaces to be chosen and licensed.</p></div>'+
+ '<div><h3>Applications</h3><div class="apps">'+p.apps.map(function(a,k){return '<div class="app" style="background:'+p.pal[k%2?3:0]+';color:'+p.pal[k%2?0:1]+'"><span class="m" style="color:inherit">'+a+'</span>'+p.logo.replace('<svg','<svg style="color:'+p.pal[k%2?0:1]+'" role="img" aria-label="'+p.n+' logo"')+'<b>'+p.n+'</b></div>'}).join('')+'</div><p class="m" style="margin-top:12px">Illustrative placeholders. Swap for real mockups.</p></div>'+
+ '<div class="a"><h3>Reflection</h3><p>'+p.refl+'</p></div><div class="b"><button class="btn p" data-next="'+nx+'" style="cursor:pointer;font:inherit;font-weight:600">Next concept: '+P[nx].n+'</button></div></div>';
+ if(!cs.open)cs.showModal();cs.scrollTop=0;document.documentElement.style.overflow='hidden';
+ if(push)history.pushState({i:i},'','#'+P[i].n.toLowerCase().replace(/ /g,'-'));
+ if(!RM&&window.gsap){gsap.from('.cs-hero h2',{yPercent:60,opacity:0,duration:1,ease:'power4.out'});gsap.from('.cs-logo',{rotate:-30,scale:.6,opacity:0,duration:1.2,ease:'back.out(1.4)'});
+  $$('.cs-body>*',cs).forEach(function(el){gsap.from(el,{y:50,opacity:0,duration:.8,ease:'power3.out',scrollTrigger:{trigger:el,scroller:cs,start:'top 88%'}})})}
+ $('.close',cs).focus()}
+function shut(){if(cs.open)cs.close();document.documentElement.style.overflow='';if(last)last.focus()}
+cs.addEventListener('click',function(e){if(e.target.closest('.close')){if(location.hash&&history.state)history.back();else shut()}var n=e.target.closest('[data-next]');if(n)open(+n.dataset.next,true)});
+cs.addEventListener('cancel',function(e){e.preventDefault();$('.close',cs).click()});
+$('#list').addEventListener('click',function(e){var b=e.target.closest('button');if(b)open(+b.dataset.i,true)});
+addEventListener('popstate',function(){var i=hashIdx();if(i>-1)open(i,false);else shut()});
+function hashIdx(){var h=location.hash.slice(1);return P.map(function(p){return p.n.toLowerCase().replace(/ /g,'-')}).indexOf(h)}
+// ---- misc ui ----
+var bg=$('#burger'),mn=$('#menu');bg.onclick=function(){var o=mn.classList.toggle('open');bg.setAttribute('aria-expanded',o);bg.textContent=o?'Close':'Menu'};
+$$('#menu a').forEach(function(a){a.onclick=function(){mn.classList.remove('open');bg.setAttribute('aria-expanded',false);bg.textContent='Menu'}});
+$('#copy').onclick=function(){var t=$('#toast'),m='pixelmaverick.ai@gmail.com';(navigator.clipboard?navigator.clipboard.writeText(m):Promise.reject()).then(ok,function(){var s=getSelection(),r=document.createRange();r.selectNodeContents($('#mail'));s.removeAllRanges();s.addRange(r);try{document.execCommand('copy')}catch(e){}ok()});function ok(){t.classList.add('on');setTimeout(function(){t.classList.remove('on')},1800)}};
+// ---- motion ----
+function go(){document.body.style.overflow='';if(RM||!window.gsap)return;
+ gsap.registerPlugin(ScrollTrigger);
+ gsap.from('.hero h1 .l span',{yPercent:110,duration:1.2,stagger:.12,ease:'power4.out'});
+ gsap.from('.hero .row>*',{opacity:0,y:30,duration:.9,delay:.5,stagger:.15});
+ gsap.from('.orb',{scale:.3,rotate:-90,opacity:0,duration:1.6,ease:'expo.out'});
+ gsap.to('.prog',{scaleX:1,ease:'none',scrollTrigger:{scrub:.2,start:0,end:'max'}});
+ gsap.to('.orb',{yPercent:60,ease:'none',scrollTrigger:{trigger:'.hero',scrub:true,start:'top top',end:'bottom top'}});
+ matchMedia('(hover:hover) and (pointer:fine)').matches&&addEventListener('pointermove',function(e){var x=e.clientX/innerWidth-.5,y=e.clientY/innerHeight-.5;gsap.to('.orb',{x:x*-50,y:y*-30,duration:1,overwrite:'auto'})});
+ $$('section h2').forEach(function(h){gsap.from(h,{yPercent:40,opacity:0,duration:1,ease:'power4.out',scrollTrigger:{trigger:h,start:'top 90%'}})});
+ $$('.proj').forEach(function(el,i){gsap.from(el,{x:i%2?80:-80,opacity:0,duration:.9,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 92%'}})});
+ gsap.from('.step',{opacity:0,y:40,stagger:.1,duration:.7,scrollTrigger:{trigger:'#proc',start:'top 85%'}});
+ gsap.from('.sk span',{opacity:0,y:30,stagger:.04,duration:.6,scrollTrigger:{trigger:'.skills',start:'top 80%'}});
+ gsap.from('.mail',{clipPath:'inset(0 100% 0 0)',duration:1.2,ease:'power4.inOut',scrollTrigger:{trigger:'.mail',start:'top 90%'}});
+ if(matchMedia('(hover:hover) and (pointer:fine)').matches){
+  var pk=$('#peek'),qx=gsap.quickTo(pk,'x',{duration:.5}),qy=gsap.quickTo(pk,'y',{duration:.5});
+  $$('.proj button').forEach(function(b){var p=P[b.dataset.i];
+   b.addEventListener('pointerenter',function(){pk.style.background=p.bg;pk.style.color=p.fg;pk.style.setProperty('--a',p.c);pk.innerHTML=p.logo;gsap.to(pk,{opacity:1,scale:1,rotate:-4,duration:.4})});
+   b.addEventListener('pointerleave',function(){gsap.to(pk,{opacity:0,scale:.6,duration:.3})});
+   b.addEventListener('pointermove',function(e){qx(e.clientX+30);qy(e.clientY-160)})});
+  $$('[data-mag]').forEach(function(b){b.addEventListener('pointermove',function(e){var r=b.getBoundingClientRect();gsap.to(b,{x:(e.clientX-r.left-r.width/2)*.25,y:(e.clientY-r.top-r.height/2)*.25,duration:.3})});b.addEventListener('pointerleave',function(){gsap.to(b,{x:0,y:0,duration:.6,ease:'elastic.out(1,.4)'})})})}
+}
+$$('section[id],#top').length;
+var secs=$$('main section[id]'),links=$$('#menu a');
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting)links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id)})})},{rootMargin:'-45% 0px -50% 0px'});secs.forEach(function(s){io.observe(s)})}
+// ---- intro ----
+var intro=$('#intro'),done=false;
+function finish(){if(done)return;done=true;if(RM||!window.gsap){intro.remove();go();return}gsap.to(intro,{clipPath:'inset(0 0 100% 0)',duration:.9,ease:'power4.inOut',onComplete:function(){intro.remove()}});go()}
+$('#skip').onclick=finish;
+var w=$('#intro .w');w.innerHTML='FAHIM'.split('').map(function(c){return '<span>'+c+'</span>'}).join('');
+if(RM||!window.gsap){finish()}else{document.body.style.overflow='hidden';gsap.from('#intro .w span',{yPercent:120,duration:.8,stagger:.08,ease:'power4.out'});gsap.to('#intro .w span',{fontStretch:'125%',duration:.9,delay:.7,ease:'power2.inOut',stagger:.05});gsap.delayedCall(1.9,finish)}
+
+// ---- GTA ----
+(function(){
+var sky=function(seed){var x=0,o='',h;while(x<1200){var w=40+(seed=(seed*9301+49297)%233280)/233280*60;h=30+(seed=(seed*9301+49297)%233280)/233280*(70);o+='<rect x="'+x+'" y="'+(100-h)+'" width="'+(w-4)+'" height="'+h+'" />';if(h>60)o+='<rect x="'+(x+w/2-6)+'" y="'+(100-h-14)+'" width="4" height="14"/>';x+=w}
+ return '<svg viewBox="0 0 1200 100" preserveAspectRatio="none" fill="'+(seed%2?'#2a0b3f':'#1b0836')+'">'+o+'</svg>'};
+$('#sk1').innerHTML=sky(7)+sky(7);$('#sk2').innerHTML=sky(31).replace(/#\w+/,'#0d0418')+sky(31).replace(/#\w+/,'#0d0418');
+var F=[['Born as Race\u2019n\u2019Chase','The very first GTA (1997) started life under a different name, made by DMA Design in Dundee, Scotland.','#C8FF00'],
+['Los Santos is LA','GTA V\u2019s Los Santos is a playful version of Los Angeles, and the map has mountains, desert, sea and countryside.','#FF2E88'],
+['Neon 1980s','Vice City (2002) turned 1980s Miami into a pastel, synth-soaked playground and its radio stations became legendary.','#FF9A3C'],
+['Radio is a character','Fake radio stations, ads and talk shows give every GTA city its voice, humour and satire.','#7B5CFF'],
+['One map, three cities','San Andreas (2004) put Los Santos, San Fierro and Las Venturas in one huge state-sized world.','#C8FF00'],
+['GTA VI returns to Vice City','The next game goes back to a Vice City-inspired setting in the state of Leonida, with two lead characters, Lucia and Jason.','#FF2E88']];
+$('#gcards').innerHTML=F.map(function(f,i){return '<button class="gcard" style="--c:'+f[2]+'" aria-pressed="false"><span class="in"><span class="fr"><span class="m">Fact 0'+(i+1)+' \u2014 tap to flip</span><b>'+f[0]+'</b></span><span class="bk"><span class="m">Did you know?</span><span>'+f[1]+'</span></span></span></button>'}).join('');
+$('#gcards').addEventListener('click',function(e){var b=e.target.closest('.gcard');if(b){var on=b.classList.toggle('flip');b.setAttribute('aria-pressed',on)}});
+var T=[['1997','Grand Theft Auto'],['2001','GTA III, the 3D leap'],['2002','Vice City'],['2004','San Andreas'],['2008','GTA IV'],['2013','GTA V'],['2026','GTA VI (announced)']];
+$('#gtl').innerHTML=T.map(function(t){return '<li><b>'+t[0]+'</b><span class="m">'+t[1]+'</span></li>'}).join('');
+// countdown
+var tgt=Date.UTC(2026,10,19,0,0,0);function pad(n){return String(n).padStart(2,'0')}
+function tick(){var d=tgt-Date.now();if(d<=0){['d','h','m','s'].forEach(function(k){$('#cd-'+k).textContent='00'});$('#cd-note').textContent='The announced release date has arrived. Check Rockstar for the latest.';return false}
+ $('#cd-d').textContent=Math.floor(d/864e5);$('#cd-h').textContent=pad(Math.floor(d/36e5)%24);$('#cd-m').textContent=pad(Math.floor(d/6e4)%60);$('#cd-s').textContent=pad(Math.floor(d/1e3)%60);return true}
+if(tick()&&!RM)setInterval(tick,1000);
+// reveal + count-up
+function count(el){var n=+el.dataset.n,s=el.dataset.s||'';if(RM){el.textContent=n+s;return}var t0=performance.now();(function f(t){var k=Math.min(1,(t-t0)/1600),e=1-Math.pow(1-k,4);el.textContent=Math.round(n*e)+(k<1?'':s);if(k<1)requestAnimationFrame(f)})(t0)}
+if('IntersectionObserver' in window){var o=new IntersectionObserver(function(en){en.forEach(function(e){if(!e.isIntersecting)return;e.target.classList.add('in');$$('[data-n]',e.target).forEach(count);if(e.target.id==='gtl')e.target.style.setProperty('--p',1);o.unobserve(e.target)})},{threshold:.15});$$('.gta-rv').forEach(function(el){o.observe(el)})}
+else{$$('.gta-rv').forEach(function(el){el.classList.add('in')});$$('[data-n]').forEach(count);$('#gtl').style.setProperty('--p',1)}
+})();
+if(hashIdx()>-1)open(hashIdx(),false);
+})();
+</script>
+</body></html>
